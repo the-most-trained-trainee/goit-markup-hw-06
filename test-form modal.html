@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <form class="js-speaker-form">
+      <h3 class="form-heading">Оставьте свои данные, мы вам перезвоним</h3>
+      <ul class="form-field-list">
+        <li class="form-field">
+          <label for="name" class="form-label">Имя</label>
+          <div class="form-label-container">
+            <svg class="form-label-icon">
+              <use href="./images/symbol-defs.svg#form-name"></use>
+            </svg>
+            <input type="text" name="name" id="name" />
+          </div>
+        </li>
+        <li class="form-field">
+          <label for="tel" class="form-label">Телефон</label>
+          <div class="form-label-container">
+            <svg class="form-label-icon">
+              <use href="./images/symbol-defs.svg#form-phone"></use>
+            </svg>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+        </li>
+        <li class="form-field">
+          <label for="mail" class="form-label">Почта</label>
+          <div class="form-label-container">
+            <svg class="form-label-icon">
+              <use href="./images/symbol-defs.svg#form-email"></use>
+            </svg>
+            <input type="email" name="mail" id="mail" />
+          </div>
+        </li>
+        <li class="form-field">
+          <label for="comment" class="form-label">Комментарий</label>
+          <textarea
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="7"
+            class="modal-textarea"
+            placeholder="Введите текст"
+          ></textarea>
+        </li>
+      </ul>
+      <div class="gtc-checkbox">
+        <input type="checkbox" name="gtc" value="accepted-gtc" id="gtc" />
+        <span class="checkbox-frame"></span>
+        <label for="gtc"
+          >Соглашаюсь с рассылкой и принимаю
+          <a href="" class="gtc-link">Условия договора</a></label
+        >
+      </div>
+      <button type="submit" class="submit-button">Отправить</button>
+    </form>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
+</html>
