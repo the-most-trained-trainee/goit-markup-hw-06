@@ -1088,7 +1088,7 @@ footer {
     text-align: center;
     cursor: pointer;
     border: none;
-    transition: box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-submit-button::after {
@@ -1121,6 +1121,12 @@ footer {
     line-height: 20px;
     letter-spacing: 0.03em;
     color: rgb(255, 255, 255);
+    transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+#footer-mail:hover {
+    border-color: var(--text-hover-color);
 }
 
 .footer-form-container {
@@ -1132,4 +1138,12 @@ footer {
     fill: #FFFFFF;
     width: 24px;
     height: 24px;
+}
+
+.footer-form-focus {
+    display: inline-flex;
+}
+
+.footer-form-focus:focus-within #footer-mail {
+    border-color: var(--text-hover-color);
 }
