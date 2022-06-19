@@ -70,6 +70,66 @@
                 <use href="./images/symbol-defs.svg#close-button"></use>
               </svg>
             </button>
+
+            <form class="js-speaker-form">
+              <h3 class="form-heading">
+                Оставьте свои данные, мы вам перезвоним
+              </h3>
+              <ul class="form-field-list">
+                <li class="form-field">
+                  <label for="name" class="form-label">Имя</label>
+                  <div class="form-label-container">
+                    <svg class="form-label-icon">
+                      <use href="./images/symbol-defs.svg#form-name"></use>
+                    </svg>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                </li>
+                <li class="form-field">
+                  <label for="tel" class="form-label">Телефон</label>
+                  <div class="form-label-container">
+                    <svg class="form-label-icon">
+                      <use href="./images/symbol-defs.svg#form-phone"></use>
+                    </svg>
+                    <input type="tel" name="tel" id="tel" />
+                  </div>
+                </li>
+                <li class="form-field">
+                  <label for="mail" class="form-label">Почта</label>
+                  <div class="form-label-container">
+                    <svg class="form-label-icon">
+                      <use href="./images/symbol-defs.svg#form-email"></use>
+                    </svg>
+                    <input type="email" name="mail" id="mail" />
+                  </div>
+                </li>
+                <li class="form-field">
+                  <label for="comment" class="form-label">Комментарий</label>
+                  <textarea
+                    name="comment"
+                    id="comment"
+                    cols="30"
+                    rows="7"
+                    class="modal-textarea"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </li>
+              </ul>
+              <div class="gtc-checkbox">
+                <input
+                  type="checkbox"
+                  name="gtc"
+                  value="accepted-gtc"
+                  id="gtc"
+                />
+                <span class="checkbox-frame"></span>
+                <label for="gtc"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <a href="" class="gtc-link">Условия договора</a></label
+                >
+              </div>
+              <button type="submit" class="submit-button">Отправить</button>
+            </form>
           </div>
         </div>
       </div>
@@ -141,7 +201,7 @@
                   width="370"
                   class="activity-image"
                 />
-                <h3 class="activity-heading">Верстка</h3>
+                <h3 class="activity-heading">Десктопные приложения</h3>
               </div>
             </li>
             <li>
@@ -163,7 +223,7 @@
                   width="370"
                   class="activity-image"
                 />
-                <h3 class="activity-heading">Дизайн</h3>
+                <h3 class="activity-heading">Дизайнерские решения</h3>
               </div>
             </li>
           </ul>
@@ -329,51 +389,53 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="section-header">Постоянные клиенты</h2>
-        <ul class="invisible-list client-list">
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client1"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client2"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client3"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client4"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client5"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="" class="client-card">
-              <svg class="client-pict">
-                <use href="./images/symbol-defs.svg#client6"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section-header">Постоянные клиенты</h2>
+          <ul class="invisible-list client-list">
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client3"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client4"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client5"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="client-card">
+                <svg class="client-pict">
+                  <use href="./images/symbol-defs.svg#client6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <!-- Footer Part -->
@@ -435,6 +497,20 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form">
+          <h3 class="footer-form-heading">Подпишитесь на рассылку</h3>
+          <div class="footer-form-container">
+            <input
+              type="email"
+              name="footer-mail"
+              id="footer-mail"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-submit-button">
+              Подписаться
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
